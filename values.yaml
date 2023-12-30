@@ -10,7 +10,7 @@ image:
   repository: kingnathanal/spring-basic
   pullPolicy: Always
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "0.2.1"
+  tag: "0.2.2"
 
 imagePullSecrets: []
 nameOverride: ""
