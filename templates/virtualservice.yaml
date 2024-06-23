@@ -4,8 +4,8 @@ metadata:
   name: {{ .Chart.Name }}
 spec:
   hosts:
-  - "{{ .Chart.Name }}.app.williambrittonjr.com"
+  - {{ .Chart.Name + ".app.williambrittonjr.com" }}
   http:
   - route:
     - destination:
-        host: "{{ .Chart.Name }}.{{ .Values.Namespace }}.svc.cluster.local"
+        host: {{ .Chart.Name + "." + .Values.Namespace + ".svc.cluster.local" }}
