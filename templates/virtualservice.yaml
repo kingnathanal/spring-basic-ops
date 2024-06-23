@@ -14,5 +14,5 @@ spec:
     route:
     - destination:
         port:
-          number: 8080
+          number: 9080
         host: {{ printf "%s.%s.svc.cluster.local" .Chart.Name .Chart.Name }}
