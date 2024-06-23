@@ -8,4 +8,4 @@ spec:
   http:
   - route:
     - destination:
-        host: {{ printf "%s.%s.svc.cluster.local" .Chart.Name .Values.Namespace }}
+        host: {{ printf "%s.svc.cluster.local" .Values.Namespace }}
