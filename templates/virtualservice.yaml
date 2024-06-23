@@ -10,7 +10,7 @@ spec:
   http:
   - match:
     - uri:
-        prefix: /springboot-health
+        prefix: /
     route:
     - destination:
         port:
