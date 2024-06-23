@@ -6,6 +6,11 @@ spec:
   hosts:
   - {{ printf "%s.app.williambrittonjr.com" .Chart.Name }}
   http:
-  - route:
+  - match:
+    - uri:
+        prefix: /
+    route:
     - destination:
+        port:
+          number: 80
         host: {{ printf "%s.svc.cluster.local" .Chart.Name }}
