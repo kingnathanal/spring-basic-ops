@@ -13,4 +13,4 @@ spec:
     - destination:
         port:
           number: 9080
-        host: {{ printf "%s.svc.cluster.local" .Chart.Name }}
+        host: {{ printf "%s.%s.svc.cluster.local" .Chart.Name .Chart.Name }}
