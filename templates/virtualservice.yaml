@@ -4,13 +4,13 @@ metadata:
   name: {{ .Chart.Name }}
 spec:
   hosts:
-  - {{ printf "%s.app.williambrittonjr.com" .Chart.Name }}
+  - {{ printf "%s.%s.svc.cluster.local" .Chart.Name .Chart.Name }}
   gateways:
   - istio-ingress/istio-ingress
   http:
   - match:
     - uri:
-        prefix: /
+        prefix: /springboot-health
     route:
     - destination:
         port:
