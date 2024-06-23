@@ -6,7 +6,7 @@ spec:
   hosts:
   - {{ printf "%s.app.williambrittonjr.com" .Chart.Name }}
   gateways:
-  - istio-ingress/istio-ingress
+  - istio-ingress/ingress-gateway
   http:
   - match:
     - uri:
