@@ -4,7 +4,7 @@ metadata:
   name: {{ .Chart.Name }}
 spec:
   hosts:
-  - {{ printf "%s.%s.svc.cluster.local" .Chart.Name .Chart.Name }}
+  - {{ printf "%s.app.williambrittonjr.com" .Chart.Name }}
   gateways:
   - istio-ingress/istio-ingress
   http:
@@ -15,4 +15,4 @@ spec:
     - destination:
         port:
           number: 9080
-        host: {{ printf "%s.%s.svc.cluster.local" .Chart.Name .Chart.Name }}
+        host: {{ .Chart.Name }}
