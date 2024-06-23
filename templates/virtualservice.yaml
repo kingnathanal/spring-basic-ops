@@ -8,4 +8,4 @@ spec:
   http:
   - route:
     - destination:
-        host: {{ $url2 := print .Chart.Name .Values.Namespace ".svc.cluster.local" }}{{ $url2 }}
+        host: {{ $url2 := print .Chart.Name "." }}{{ $url2 := print .Values.Namespace ".svc.cluster.local" }}{{ $url2 }}
